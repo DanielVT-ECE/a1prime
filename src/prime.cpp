@@ -8,15 +8,15 @@ bool isPrimeHalf(int n, long long* modOps) {
     // Checks for divisibility up to n/2
 
     if (n < 2) return false;
-    bool isPrime = true;
-    for (int i = 2; i <= n / 2; ++i) {
+    if (n == 2) return true;
+    for (int i = 3; i <= n / 2; ++i) {
         if (modOps) (*modOps)++;
         if (n % i == 0) {
-            isPrime = false;
+            return false;
         }
     }
     // return true if n is prime else return false
-    return isPrime;
+    return true;
     // count modulo operations when modOps is not nullptr
 }
 
@@ -26,15 +26,15 @@ bool isPrimeSqrt(int n, long long* modOps) {
     //Checks for divisibility up to square root of n
 
     if (n < 2) return false;
-    bool isPrime = true;
-    for (int i = 2; i <= std::sqrt(n); ++i) {
+    if (n == 2) return true;
+    for (int i = 3; i <= std::sqrt(n); ++i) {
         if (modOps) (*modOps)++;
         if (n % i == 0) {
-            isPrime = false;
+            return false;
         }
     }
     // return true if n is prime else return false
-    return isPrime;
+    return true;
     // Remember to count modulo operations when modOps is not nullptr
 }
 
