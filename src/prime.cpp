@@ -7,6 +7,7 @@ bool isPrimeHalf(int n, long long* modOps) {
     // Your implementation here
     // Checks for divisibility up to n/2
 
+    if (n < 2) return false;
     bool isPrime = true;
     for (int i = 2; i <= n / 2; ++i) {
         if (modOps) (*modOps)++;
@@ -24,6 +25,7 @@ bool isPrimeSqrt(int n, long long* modOps) {
     // Your implementation here
     //Checks for divisibility up to square root of n
 
+    if (n < 2) return false;
     bool isPrime = true;
     for (int i = 2; i <= std::sqrt(n); ++i) {
         if (modOps) (*modOps)++;
