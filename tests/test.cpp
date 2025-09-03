@@ -48,5 +48,4 @@ TEST_CASE("Testing Edge Cases", "[Edge Cases]") {
     REQUIRE(isPrimeSqrt(4) == false);
     REQUIRE(isPrimeHalf(5) == true);
     REQUIRE(isPrimeSqrt(5) == true);
-
 }

@@ -36,8 +36,8 @@ bool isPrimeSqrt(int n, long long* modOps) {
 long long countModOps(PrimeFn isPrime, int lo, int hi) {
     // Your implementation here
     // This should call the provided isPrime function for each number in range [lo, hi]
-    long long modOps = 0;
     for (int i = lo; i <= hi; ++i) {
+        long long modOps = 0;
         isPrime(i, &modOps);
         // Accumulate the total number of modulo operations
     }
