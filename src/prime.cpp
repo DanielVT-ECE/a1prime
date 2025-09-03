@@ -1,6 +1,7 @@
 //prime.cpp​
 #include "prime.hpp"
 #include <cmath>
+#include <iostream>
 
 // TODO: Implement isPrimeHalf
 bool isPrimeHalf(int n, long long* modOps) {
@@ -9,7 +10,7 @@ bool isPrimeHalf(int n, long long* modOps) {
 
     if (n < 2) return false;
     if (n == 2) return true;
-    for (int i = 3; i <= n / 2; ++i) {
+    for (int i = 2; i <= n / 2; ++i) {
         if (modOps) (*modOps)++;
         if (n % i == 0) {
             return false;
@@ -27,7 +28,7 @@ bool isPrimeSqrt(int n, long long* modOps) {
 
     if (n < 2) return false;
     if (n == 2) return true;
-    for (int i = 3; i <= std::sqrt(n); ++i) {
+    for (int i = 2; i <= std::sqrt(n); ++i) {
         if (modOps) (*modOps)++;
         if (n % i == 0) {
             return false;
