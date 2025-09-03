@@ -13,5 +13,6 @@ int main() {
     
     double ratio = static_cast<double>(halfOps) / sqrtOps;
     std::cout << "Ratio (Half/Sqrt): " << ratio << "\n";
+
     return 0;
 }

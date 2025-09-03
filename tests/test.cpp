@@ -2,7 +2,7 @@
 #include "catch2/catch.hpp"
 #include "prime.hpp"
 // Testing few prime identification
-TEST_CASE("Testing  Pime Identification", "[Prime Identification]") {
+TEST_CASE("Testing Prime Identification", "[Prime Identification]") {
     REQUIRE(isPrimeHalf(5) == true);
     REQUIRE(isPrimeSqrt(5) == true);
     REQUIRE(isPrimeHalf(61) == true);
@@ -25,15 +25,15 @@ TEST_CASE("Testing Functions are Consistent over Range", "[Consistency]") {
         REQUIRE(isPrimeHalf(i) == isPrimeSqrt(i));
     }
 }
-// // Testing mod operation counts
-// TEST_CASE("Testing Modulo Operation counts", "[Mod Op Counts]") {
-//     REQUIRE(countModOps(isPrimeHalf, 2, 10) == 9);
-//     REQUIRE(countModOps(isPrimeSqrt, 2, 10) == 8);
-//     REQUIRE(countModOps(isPrimeHalf, 11, 20) == 31);
-//     REQUIRE(countModOps(isPrimeSqrt, 11, 20) == 17);
-//     REQUIRE(countModOps(isPrimeHalf, 21, 30) == 36);
-//     REQUIRE(countModOps(isPrimeSqrt, 21, 30) == 20);
-// }
+// Testing mod operation counts
+TEST_CASE("Testing Modulo Operation counts", "[Mod Op Counts]") {
+    REQUIRE(countModOps(isPrimeHalf, 2, 10) == 10);
+    REQUIRE(countModOps(isPrimeSqrt, 2, 10) == 9);
+    REQUIRE(countModOps(isPrimeHalf, 11, 20) == 22);
+    REQUIRE(countModOps(isPrimeSqrt, 11, 20) == 15);
+    REQUIRE(countModOps(isPrimeHalf, 21, 30) == 25);
+    REQUIRE(countModOps(isPrimeSqrt, 21, 30) == 17);
+}
 // test edge cases
 TEST_CASE("Testing Edge Cases", "[Edge Cases]") {
     REQUIRE(isPrimeHalf(2131131137) == true);
